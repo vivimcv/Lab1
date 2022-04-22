@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.tarea.ui.home.HomeFragment"
+        android:label="@string/menu_registro"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.tarea.ui.gallery.GalleryFragment"
+        android:label="@string/menu_listado"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_nav_gallery_to_mainActivity22"
+            app:destination="@id/mainActivity2" />
+        <action
+            android:id="@+id/action_nav_gallery_to_mainActivity3"
+            app:destination="@id/mainActivity3" />
+        <action
+            android:id="@+id/action_nav_gallery_to_mainActivity43"
+            app:destination="@id/mainActivity43" />
+        <action
+            android:id="@+id/action_nav_gallery_to_mainActivity5"
+            app:destination="@id/mainActivity5" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.example.tarea.videoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" />
+    <fragment
+        android:id="@+id/registroFragment"
+        android:name="com.example.tarea.RegistroFragment"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" />
+    <activity
+        android:id="@+id/mainActivity2"
+        android:name="com.example.tarea.MainActivity2"
+        android:label="activity_main2"
+        tools:layout="@layout/activity_main2" />
+    <activity
+        android:id="@+id/mainActivity3"
+        android:name="com.example.tarea.MainActivity3"
+        android:label="activity_main3"
+        tools:layout="@layout/activity_main3" />
+    <activity
+        android:id="@+id/mainActivity43"
+        android:name="com.example.tarea.MainActivity4"
+        android:label="activity_main4"
+        tools:layout="@layout/activity_main4" />
+    <activity
+        android:id="@+id/mainActivity5"
+        android:name="com.example.tarea.MainActivity5"
+        android:label="activity_main5"
+        tools:layout="@layout/activity_main5" />
+
+</navigation>
