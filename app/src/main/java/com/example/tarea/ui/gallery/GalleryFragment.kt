@@ -108,10 +108,10 @@ class GalleryFragment : Fragment(),Adapter.OnItemListener {
       when(itemIdAtPos.toInt()){
 
         //  1 -> Toast.makeText(context, "tres", Toast.LENGTH_LONG).show()
-     1 -> Navigation.findNavController(view).navigate(R.id.action_nav_gallery_to_mainActivity22)
-     2 -> Navigation.findNavController(view).navigate(R.id.action_nav_gallery_to_mainActivity3)
-     3 -> Navigation.findNavController(view).navigate(R.id.action_nav_gallery_to_mainActivity43)
-     4 -> Navigation.findNavController(view).navigate(R.id.action_nav_gallery_to_mainActivity5)
+     1 -> Navigation.findNavController(view).navigate(R.id.action_listadoFragment_to_mainActivity2)
+     2 -> Navigation.findNavController(view).navigate(R.id.action_listadoFragment_to_mainActivity3)
+     3 -> Navigation.findNavController(view).navigate(R.id.action_listadoFragment_to_mainActivity43)
+     4 -> Navigation.findNavController(view).navigate(R.id.action_listadoFragment_to_mainActivity43)
         //  1 -> Navigation.findNavController(view).navigate(R.id.action_nav_gallery_to_videoFragment)
          // 2 -> Toast.makeText(context, "dos ", Toast.LENGTH_LONG).show()
           else -> Toast.makeText(context, "tres", Toast.LENGTH_LONG).show()

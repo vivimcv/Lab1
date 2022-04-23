@@ -46,85 +46,10 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<Button>(R.id.button).setOnClickListener {
-            with(binding) {
-                if (validaCampos()) {
-                    validaSeisCaracteres()
-
-                    //val numero = Integer.parseInt(etNumero.text.toString())
-                //    val numero = editTextTextPassword.text.toString().toInt()
-                //    if (esMagico(numero)) tvResultado.text = getString(R.string.si_magico, numero, "!")
-                //    else tvResultado.text = getString(R.string.no_magico, numero)
-
-
-                } else {
-
-                //    Toast.makeText(getContext(), "hola", Toast.LENGTH_SHORT).show()
-                    editTextTextPassword.error = "Ingresa al menos seis caracteres, entre ellos una letra y un número"
-                    editTextTextPassword.requestFocus()
-
-                }
-            }
-          //  Navigation.findNavController(view).navigate(R.id.nav_gallery)
-           // Toast.makeText(this@HomeFragment,"aqui", Toast.LENGTH_SHORT ).show()
-         //   Toast.makeText(this@HomeFragment, getString(R.string.ingresa_numero), Toast.LENGTH_SHORT).show()
-        }
-    }
-
-
-    private fun validaCampos(): Boolean{
-
-       if(binding.editTextTextPassword.text.toString() != "")return  true
-      //  if(binding..text.toString() != "" ) return true
-      //  Toast.makeText(this, getString(R.s))
-       // Toast.makeText(this@HomeFragment, getString(R.string.ingresa_numero), Toast.LENGTH_SHORT).show()
-        else return false
-
 
     }
 
 
-    private fun validaSeisCaracteres(): Boolean{
-
-    //    val input = Integer.parseInt(binding.editTextTextPassword.toString() )
-
-
-        val input = binding.editTextTextPassword.getText().toString().trim().length
-        val password = binding.editTextTextPassword.getText().toString()
-        if (input > 6){
-           // Toast.makeText(getContext(), "mayor a seis ", Toast.LENGTH_SHORT).show()
-           // if (){
-
-            isValidPassword(password)
-            if (isValidPassword(password.trim())) {
-                Toast.makeText(getContext(), password, Toast.LENGTH_SHORT).show()
-                Toast.makeText(getContext(), "Contraseña válida", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(getContext(), password, Toast.LENGTH_SHORT).show()
-                Toast.makeText(getContext(), "Contraseña invalida", Toast.LENGTH_SHORT).show();
-            }
-               return true
-
-
-
-        }else{
-            Toast.makeText(getContext(), "La contraseña debe contener más de seis caracteres. ", Toast.LENGTH_SHORT).show()
-            return false
-
-        }
-
-
-    }
-    fun isValidPassword(password: String?) : Boolean {
-        password?.let {
-            val passwordPattern = "^(?=.*[0-9])(?=.*[a-z]).{6,}$"
-           // val passwordPattern = "(/^(?=.*\\d)(?=.*[A-Z])([@\$%&#])[0-9a-zA-Z]{4,}\$/)"
-           // val passwordPattern = " ^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$"
-            val passwordMatcher = Regex(passwordPattern)
-
-            return passwordMatcher.find(password) != null
-        } ?: return false
-    }
 
 
 }

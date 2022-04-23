@@ -1,5 +1,6 @@
 package com.example.tarea
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -17,5 +18,8 @@ class MainActivity5 : AppCompatActivity() {
         v1.setMediaController(mc)
     }
 
-    fun onClick(view: View) {}
+    fun onClick(view: View) {
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
+    }
 }

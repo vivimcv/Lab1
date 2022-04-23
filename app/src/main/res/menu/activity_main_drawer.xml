@@ -7,9 +7,13 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_registro" />
+            android:title="Home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_registro"
+            android:icon="@android:drawable/ic_dialog_dialer"
+            android:title="Registro" />
+        <item
+            android:id="@+id/nav_trailers"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_listado" />
     </group>

@@ -7,7 +7,9 @@ import android.util.Log
 import android.view.View
 import android.widget.MediaController
 import android.widget.VideoView
+import androidx.navigation.Navigation
 import com.example.tarea.ui.gallery.GalleryFragment
+import com.example.tarea.ui.home.HomeFragment
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -22,6 +24,7 @@ class MainActivity2 : AppCompatActivity() {
     }
 
     fun onClick(view: View) {
+
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }

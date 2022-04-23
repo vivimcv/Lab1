@@ -10,6 +10,7 @@ import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tarea.databinding.ListViewBinding
 import com.example.tarea.movielist
+import kotlinx.android.synthetic.main.nav_header_main.view.*
 
 class Adapter(private val context: Context, val datos: ArrayList<movielist>,val onItemListener: OnItemListener): BaseAdapter(){
 
@@ -36,6 +37,8 @@ class Adapter(private val context: Context, val datos: ArrayList<movielist>,val 
         with(binding){
             tvTitulo.text=datos[p0].title
             tvGenero.text= datos[p0].genre
+
+          //  ivMovie.drawable = datos[p0].image
         }
         return binding.root
     }
